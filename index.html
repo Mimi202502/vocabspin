@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Vocabulary List with Examples</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff6f61;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #wordDisplay {
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            font-size: 1.2rem;
+        }
+
+        strong {
+            color: #ff6f61;
+        }
+
+        .example {
+            font-style: italic;
+            color: #a8a8a8;
+        }
+
+        /* Button Styles */
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff3b2f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Mobile-Friendly Styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            #wordDisplay {
+                font-size: 1rem;
+                padding: 15px;
+            }
+
+            button {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Advanced English-Malay Vocabulary</h1>
+    <button onclick="showRandomWord()">Show Random Word</button>
+    <div id="wordDisplay"></div>
+
+    <script>
+        // Hardcoded list of advanced vocabulary and verbs with Malay translations and example sentences
+        const vocabulary = [
+            { english: "analyze", malay: "menganalisis", example: "The scientist analyzed the data carefully." },
+            { english: "comprehend", malay: "memahami", example: "It is difficult to comprehend complex theories without practice." },
+            { english: "synthesize", malay: "mensintesis", example: "The researcher synthesized information from multiple sources." },
+            { english: "evaluate", malay: "menilai", example: "Teachers evaluate students based on their performance." },
+            { english: "hypothesize", malay: "membuat hipotesis", example: "The students were asked to hypothesize about the experiment's outcome." },
+            { english: "implement", malay: "melaksanakan", example: "The company plans to implement a new strategy next year." },
+            { english: "critique", malay: "mengkritik", example: "The professor asked the students to critique the article." },
+            { english: "elaborate", malay: "menghuraikan", example: "Can you elaborate on your point?" },
+            { english: "facilitate", malay: "memudahkan", example: "The new software will facilitate the process." },
+            { english: "negotiate", malay: "berunding", example: "The two parties negotiated a deal successfully." },
+            { english: "prioritize", malay: "mengutamakan", example: "You need to prioritize your tasks to meet the deadline." },
+            { english: "validate", malay: "mengesahkan", example: "The results were validated by independent experts." },
+            { english: "diversify", malay: "mempelbagaikan", example: "The company decided to diversify its product range." },
+            { english: "innovate", malay: "berinovasi", example: "The team worked hard to innovate new solutions." },
+            { english: "collaborate", malay: "berkolaborasi", example: "The researchers collaborated on the project." },
+            { english: "delegate", malay: "mendelegasikan", example: "The manager delegated tasks to her team members." },
+            { english: "optimize", malay: "mengoptimumkan", example: "The engineer optimized the design for better performance." },
+            { english: "quantify", malay: "mengkuantifikasi", example: "It is difficult to quantify the impact of the policy." },
+            { english: "simulate", malay: "mensimulasikan", example: "The program simulates real-world scenarios." },
+            { english: "theorize", malay: "membuat teori", example: "Scientists theorize about the origins of the universe." },
+            { english: "articulate", malay: "menyatakan", example: "She articulated her ideas clearly during the presentation." },
+            { english: "conceptualize", malay: "mengkonsepsikan", example: "The artist conceptualized a new design for the project." },
+            { english: "demonstrate", malay: "menunjukkan", example: "The experiment demonstrated the principle of gravity." },
+            { english: "illustrate", malay: "menggambarkan", example: "The graph illustrates the trend over time." },
+            { english: "interpret", malay: "mentafsir", example: "The lawyer interpreted the law for the client." },
+            { english: "justify", malay: "mempertahankan", example: "He had to justify his decision to the committee." },
+            { english: "persuade", malay: "memujuk", example: "She tried to persuade her friend to join the trip." },
+            { english: "resolve", malay: "menyelesaikan", example: "The team resolved the issue quickly." },
+            { english: "summarize", malay: "meringkaskan", example: "Can you summarize the main points of the article?" },
+            { english: "verify", malay: "mengesahkan", example: "The accountant verified the financial records." }
+        ];
+
+        function showRandomWord() {
+            // Get a random word from the vocabulary list
+            const randomIndex = Math.floor(Math.random() * vocabulary.length);
+            const randomWord = vocabulary[randomIndex];
+
+            // Display the word, translation, and example
+            const displayElement = document.getElementById("wordDisplay");
+            displayElement.innerHTML = `
+                <strong>Word:</strong> ${randomWord.english}<br>
+                <strong>Translation:</strong> ${randomWord.malay}<br>
+                <strong>Example:</strong> <span class="example">${randomWord.example}</span>
+            `;
+        }
+    </script>
+</body>
+</html>
