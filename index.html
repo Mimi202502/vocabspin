@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Vocabulary List with Examples</title>
+    <title>English 101</title>
     <style>
-        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -40,7 +39,6 @@
             color: #a8a8a8;
         }
 
-        /* Button Styles */
         button {
             display: block;
             margin: 0 auto;
@@ -62,12 +60,6 @@
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
         }
 
-        button:active {
-            transform: translateY(0);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Mobile-Friendly Styles */
         @media (max-width: 600px) {
             h1 {
                 font-size: 2rem;
@@ -87,51 +79,47 @@
 </head>
 <body>
 
-    <h1>Advanced English-Malay Vocabulary</h1>
+    <h1>Daily Activity Vocabulary</h1>
     <button onclick="showRandomWord()">Show Random Word</button>
     <div id="wordDisplay"></div>
 
     <script>
-        // Hardcoded list of advanced vocabulary and verbs with Malay translations and example sentences
         const vocabulary = [
-            { english: "analyze", malay: "menganalisis", example: "The scientist analyzed the data carefully." },
-            { english: "comprehend", malay: "memahami", example: "It is difficult to comprehend complex theories without practice." },
-            { english: "synthesize", malay: "mensintesis", example: "The researcher synthesized information from multiple sources." },
-            { english: "evaluate", malay: "menilai", example: "Teachers evaluate students based on their performance." },
-            { english: "hypothesize", malay: "membuat hipotesis", example: "The students were asked to hypothesize about the experiment's outcome." },
-            { english: "implement", malay: "melaksanakan", example: "The company plans to implement a new strategy next year." },
-            { english: "critique", malay: "mengkritik", example: "The professor asked the students to critique the article." },
-            { english: "elaborate", malay: "menghuraikan", example: "Can you elaborate on your point?" },
-            { english: "facilitate", malay: "memudahkan", example: "The new software will facilitate the process." },
-            { english: "negotiate", malay: "berunding", example: "The two parties negotiated a deal successfully." },
-            { english: "prioritize", malay: "mengutamakan", example: "You need to prioritize your tasks to meet the deadline." },
-            { english: "validate", malay: "mengesahkan", example: "The results were validated by independent experts." },
-            { english: "diversify", malay: "mempelbagaikan", example: "The company decided to diversify its product range." },
-            { english: "innovate", malay: "berinovasi", example: "The team worked hard to innovate new solutions." },
-            { english: "collaborate", malay: "berkolaborasi", example: "The researchers collaborated on the project." },
-            { english: "delegate", malay: "mendelegasikan", example: "The manager delegated tasks to her team members." },
-            { english: "optimize", malay: "mengoptimumkan", example: "The engineer optimized the design for better performance." },
-            { english: "quantify", malay: "mengkuantifikasi", example: "It is difficult to quantify the impact of the policy." },
-            { english: "simulate", malay: "mensimulasikan", example: "The program simulates real-world scenarios." },
-            { english: "theorize", malay: "membuat teori", example: "Scientists theorize about the origins of the universe." },
-            { english: "articulate", malay: "menyatakan", example: "She articulated her ideas clearly during the presentation." },
-            { english: "conceptualize", malay: "mengkonsepsikan", example: "The artist conceptualized a new design for the project." },
-            { english: "demonstrate", malay: "menunjukkan", example: "The experiment demonstrated the principle of gravity." },
-            { english: "illustrate", malay: "menggambarkan", example: "The graph illustrates the trend over time." },
-            { english: "interpret", malay: "mentafsir", example: "The lawyer interpreted the law for the client." },
-            { english: "justify", malay: "mempertahankan", example: "He had to justify his decision to the committee." },
-            { english: "persuade", malay: "memujuk", example: "She tried to persuade her friend to join the trip." },
-            { english: "resolve", malay: "menyelesaikan", example: "The team resolved the issue quickly." },
-            { english: "summarize", malay: "meringkaskan", example: "Can you summarize the main points of the article?" },
-            { english: "verify", malay: "mengesahkan", example: "The accountant verified the financial records." }
+            { english: "wake up", malay: "bangun tidur", example: "I wake up at 6 AM every day." },
+            { english: "brush teeth", malay: "gosok gigi", example: "He brushes his teeth after every meal." },
+            { english: "take a shower", malay: "mandi", example: "She takes a shower before going to work." },
+            { english: "get dressed", malay: "berpakaian", example: "I get dressed quickly in the morning." },
+            { english: "make the bed", malay: "mengemas katil", example: "He always makes the bed after waking up." },
+            { english: "have breakfast", malay: "sarapan", example: "We have breakfast together as a family." },
+            { english: "leave for work", malay: "berangkat ke kerja", example: "She leaves for work at 8 AM." },
+            { english: "drive to work", malay: "memandu ke tempat kerja", example: "He drives to work every morning." },
+            { english: "take the bus", malay: "menaiki bas", example: "She takes the bus to school." },
+            { english: "attend a meeting", malay: "menghadiri mesyuarat", example: "I have to attend a meeting at 10 AM." },
+            { english: "reply to emails", malay: "membalas emel", example: "He replies to emails after lunch." },
+            { english: "have lunch", malay: "makan tengah hari", example: "We have lunch at 1 PM." },
+            { english: "finish work", malay: "habis kerja", example: "She finishes work at 6 PM." },
+            { english: "go home", malay: "pulang ke rumah", example: "He goes home after work." },
+            { english: "cook dinner", malay: "memasak makan malam", example: "She cooks dinner for the family." },
+            { english: "wash dishes", malay: "basuh pinggan", example: "He washes the dishes after dinner." },
+            { english: "watch TV", malay: "menonton TV", example: "They watch TV together in the evening." },
+            { english: "read a book", malay: "membaca buku", example: "I like to read a book before sleeping." },
+            { english: "go to bed", malay: "tidur", example: "He goes to bed at 10 PM." },
+            { english: "exercise", malay: "bersenam", example: "She exercises every morning to stay fit." },
+            { english: "clean the house", malay: "mengemas rumah", example: "We clean the house every weekend." },
+            { english: "do the laundry", malay: "membasuh pakaian", example: "She does the laundry on Saturdays." },
+            { english: "buy groceries", malay: "membeli barang dapur", example: "They buy groceries every Sunday." },
+            { english: "walk the dog", malay: "membawa anjing berjalan", example: "He walks the dog in the park." },
+            { english: "water the plants", malay: "menyiram pokok", example: "She waters the plants every morning." },
+            { english: "write a report", malay: "menulis laporan", example: "I have to write a report for work." },
+            { english: "check social media", malay: "menyemak media sosial", example: "He checks social media before sleeping." },
+            { english: "call a friend", malay: "menghubungi rakan", example: "She calls her friend in the evening." },
+            { english: "go shopping", malay: "pergi membeli-belah", example: "They go shopping on the weekend." },
+            { english: "prepare lunch", malay: "menyediakan makan tengah hari", example: "She prepares lunch for the kids." }
         ];
-
+        
         function showRandomWord() {
-            // Get a random word from the vocabulary list
             const randomIndex = Math.floor(Math.random() * vocabulary.length);
             const randomWord = vocabulary[randomIndex];
-
-            // Display the word, translation, and example
             const displayElement = document.getElementById("wordDisplay");
             displayElement.innerHTML = `
                 <strong>Word:</strong> ${randomWord.english}<br>
